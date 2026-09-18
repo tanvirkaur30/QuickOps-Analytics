@@ -4,6 +4,10 @@ A business/operations analytics project: take a messy order dataset, find what's
 actually wrong with the business, separate proven facts from hypotheses, and
 recommend specific, measurable actions.
 
+## Live Dashboard
+
+ **[View QuickOps Live Dashboard]([https://quickops-analytics.streamlit.app])**
+
 **DATA → ANALYSIS → INSIGHT → ACTION → KPI** — not DATA → ML MODEL → ACCURACY.
 
 Built for an Associate Program Manager / Business Operations application.

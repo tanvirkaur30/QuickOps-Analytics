@@ -121,17 +121,40 @@ if page == "Executive Overview":
     with col3:
         loc_perf, _, _ = m.location_performance(filtered)
         fig3 = px.bar(
-            loc_perf.head(10), x="state", y="total_revenue", color="quadrant",
-            title="Top 10 States by Revenue (colored by performance quadrant)",
-        )
-        st.plotly_chart(fig3, use_container_width=True)
+    loc_perf.head(10).sort_values("total_revenue"),
+    x="total_revenue",
+    y="state",
+    color="quadrant",
+    orientation="h",
+    title="Top 10 States by Revenue (colored by performance quadrant)",
+    ) 
+
+        fig3.update_layout(
+    xaxis_title="Revenue ($)",
+    yaxis_title="State",
+    margin=dict(l=10, r=10, t=50, b=10)
+    )
+
+    st.plotly_chart(fig3, use_container_width=True)
 
     with col4:
         cat_rev = m.revenue_by(filtered, "category")
-        fig4 = px.bar(cat_rev, x="category", y="total_revenue", color="profit_margin_pct",
-                      title="Revenue by Category (colored by margin %)",
-                      color_continuous_scale="RdYlGn")
-        st.plotly_chart(fig4, use_container_width=True)
+        fig4 = px.bar(
+    cat_rev,
+    x="category",
+    y="total_revenue",
+    color="profit_margin_pct",
+    title="Revenue by Category (colored by margin %)",
+    color_continuous_scale="RdYlGn"
+)
+
+    fig4.update_layout(
+        xaxis_title="Category",
+        yaxis_title="Revenue ($)",
+        coloraxis_colorbar_title="Profit Margin (%)"
+    )
+
+    st.plotly_chart(fig4, use_container_width=True)
 
     st.markdown("---")
     st.subheader("Key Business Insights")

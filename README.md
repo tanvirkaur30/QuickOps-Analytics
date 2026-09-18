@@ -6,7 +6,7 @@ recommend specific, measurable actions.
 
 ## Live Dashboard
 
- **[View QuickOps Live Dashboard]([https://quickops-analytics.streamlit.app])**
+ ***[View QuickOps Live Dashboard](https://quickops-analytics.streamlit.app)**
 
 **DATA → ANALYSIS → INSIGHT → ACTION → KPI** — not DATA → ML MODEL → ACCURACY.
 

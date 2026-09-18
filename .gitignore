@@ -1,0 +1,30 @@
+# Environment & secrets
+.env
+.env.*
+*.pem
+*.key
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large / generated files (keep processed CSV, ignore anything bigger dumped locally)
+*.parquet
+*.db
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/

@@ -368,28 +368,40 @@ data doesn't say); a RECOMMENDATION is what to investigate or change next.
 
 ## Project Structure
 
-```
+```text
 quickops-analytics/
 ├── app.py
 ├── README.md
-├── INTERVIEW_GUIDE.md
 ├── requirements.txt
 ├── .gitignore
+│
 ├── data/
-│   ├── raw/superstore_orders.csv
-│   └── processed/orders_clean.csv
+│   ├── raw/
+│   │   └── superstore_orders.csv
+│   └── processed/
+│       └── orders_clean.csv
+│
 ├── sql/
 │   ├── schema.sql
-│   └── 01_kpi_summary.sql … 10_operational_bottlenecks.sql
+│   ├── 01_kpi_summary.sql
+│   ├── 02_orders_by_location.sql
+│   ├── 03_revenue_by_category.sql
+│   ├── 04_cancellation_analysis.sql
+│   ├── 05_peak_hours.sql
+│   ├── 06_average_order_value.sql
+│   ├── 07_delivery_performance.sql
+│   ├── 08_location_performance.sql
+│   ├── 09_category_performance.sql
+│   └── 10_operational_bottlenecks.sql
+│
 ├── notebooks/
 │   └── 01_eda.ipynb
-├── src/
-│   ├── data_cleaning.py
-│   ├── data_loading.py
-│   ├── metrics.py
-│   └── utils.py
-├── screenshots/
-└── .streamlit/secrets.toml.example
+│
+└── src/
+    ├── data_cleaning.py
+    ├── data_loading.py
+    ├── metrics.py
+    └── utils.py
 ```
 
 ---
